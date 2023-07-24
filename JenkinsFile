@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+                sh "git clone git@github.com:srujanag1992/Jenkins-Test-1.git"
 
                 // Run Maven on a Unix agent.
                   }
