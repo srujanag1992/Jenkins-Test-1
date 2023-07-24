@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+
+                // Run Maven on a Unix agent.
+                  }
+            }
+        stage('Build') {
+            steps{
+                sh "mvn clean compile install"
+                  }
+              }
+          }
+    }
